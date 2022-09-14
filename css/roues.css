@@ -1,0 +1,140 @@
+/*   color variables */
+/*   border radius */
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: Mukta, sans-serif;
+    height: 100vh;
+    
+  }
+
+  nav{
+    position: fixed;
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background: #1b1b1b;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+    z-index: 2;
+
+  }
+
+  .logo{
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 600;
+  }
+
+  section{
+    padding: 160px 0;
+    width: 100%;
+    color: #4f546c;
+    font-size: 0.9rem;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 90px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+
+  .chart-container{
+        width: 480px;
+        /* margin: 40px auto; */
+
+  }
+
+    .chart-container h2{
+        text-align: center;
+        padding-top: 35px;
+  }
+
+
+
+  table {
+    border-collapse: collapse;
+    box-shadow: 0 5px 10px #e1e5ee;
+    background-color: white;
+    text-align: left;
+    overflow: hidden;
+  }
+
+  table thead {
+    box-shadow: 0 5px 10px #e1e5ee;
+  }
+
+  table th {
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 0.7rem;
+    font-weight: 900;
+  }
+
+  table td {
+    padding: 1rem 2rem;
+  }
+
+  table a {
+    text-decoration: none;
+    color: #2962ff;
+  }
+
+  table .status {
+    border-radius: 0.2rem;
+    background-color: red;
+    padding: 0.2rem 1rem;
+    text-align: center;
+  }
+
+  table .status-apprentissage {
+    background-color: #ffcdd2;
+    color: #c62828;
+  }
+
+  table .status-intrapersonnelles {
+    background-color: #B0E0E6;
+    color: #0984e3;
+  }
+
+  table .status-reflexion {
+    background-color: #fff0c2;
+    color: #a68b00;
+  }
+
+  table .status-communication{
+    background-color: #DDA0DD;
+    color: #4834d4;
+  }
+
+  table .status-interpersonnelles {
+    background-color: #FED8B1;
+    color: #f0932b;
+  }
+
+ 
+  table .status-leadership {
+    background-color: #c8e6c9;
+    color: #388e3c;
+  }
+  
+  table .amount {
+    text-align: right;
+  }
+  table tr:nth-child(even) {
+    background-color: #f4f6fb;
+  }
+
+  .swiper-body{
+    width: 500px;
+    height: auto;
+  }
+

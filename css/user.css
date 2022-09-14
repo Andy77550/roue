@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+} 
+
+
+/* USER ET ADMIN*/
+
+section.tab {
+  padding: 180px 0;
+}
+
+h2, h3{
+  text-align: center;
+  /* margin: 50px auto; */
+}
+
+/* HEADER */
+nav{
+  position: fixed;
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #1b1b1b;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
+
+/* HEADER END */
+
+/*Tableau des softs-skills*/
+
+/* table{
+    width:100%;
+    table-layout: fixed;
+}
+
+.container-tab{
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 10px;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.tbl-header{
+    background-color: #686de0;
+    width: 75%;
+    
+}
+
+.tbl-content{
+    /* height:300px; */
+    /* overflow-x:auto;
+    margin-top: 0px; */
+    /* border: 1px solid rgba(255,255,255,0.3);   */
+/* } */
+
+/* .th-family{
+    width: 275px; 
+}
+
+.th-items{
+    width: 150px; 
+}
+
+.th-taux{
+    width: 250px; 
+}
+
+
+.td-items{
+    margin: 12px auto;
+}
+
+td {
+	border : 1px solid #292c2f;
+}
+
+th,td{
+    padding: 20px 6px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    
+}
+
+th{
+    padding: 20px 15px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    
+}
+
+td.label-check {
+    text-align: center;
+}
+
+.td-family{
+    text-align: center;
+}
+
+.horns{
+    margin: .4rem;
+    font-size: 12px;
+}  */
+
+.tab-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  border-collapse: collapse;
+  box-shadow: 0 5px 10px #e1e5ee;
+  background-color: white;
+  text-align: left;
+  overflow: hidden;
+}
+table thead {
+  box-shadow: 0 5px 10px #e1e5ee;
+}
+table th {
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+table td {
+  padding: 1rem 2rem;
+}
+table a {
+  text-decoration: none;
+  color: #2962ff;
+}
+table .status {
+  border-radius: 0.2rem;
+  background-color: red;
+  padding: 0.2rem 1rem;
+  text-align: center;
+}
+
+table .status-apprentissage {
+  background-color: #ffcdd2;
+  color: #c62828;
+}
+
+table .status-intrapersonnelles {
+  background-color: #B0E0E6;
+  color: #0984e3;
+}
+
+table .status-reflexion {
+  background-color: #fff0c2;
+  color: #a68b00;
+}
+
+table .status-communication{
+  background-color: #DDA0DD;
+  color: #4834d4;
+}
+
+table .status-interpersonnelles {
+  background-color: #FED8B1;
+  color: #f0932b;
+}
+
+
+table .status-leadership {
+  background-color: #c8e6c9;
+  color: #388e3c;
+}
+
+table .amount {
+  text-align: right;
+}
+table tr:nth-child(even) {
+  background-color: #f4f6fb;
+}
+
+
+
+.btn {
+    display: block;
+    width: 30%;
+    margin: 0 auto;
+    padding: 15px 20px;
+    text-align: center;
+    border: none;
+    background: #a29bfe;
+    outline: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    color: #FFF;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    background: #6c5ce7;
+}
